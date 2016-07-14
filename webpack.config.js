@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
+const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 const PATHS = {
   app: path.join(__dirname, './app'),
@@ -13,7 +14,8 @@ process.env.BABEL_ENV = TARGET;
 
 const common = {
   entry: {
-    app: PATHS.app
+    app: PATHS.app,
+    vendor: ['react', 'react-dom']
   },
   output: {
     path: PATHS.build,
@@ -43,13 +45,14 @@ if (TARGET === 'start' || !TARGET) {
       hot: true,
       inline: true,
       progress: true,
-      stats: 'minimal',  // 'errors-only',
+      stats: 'minimal',
       host: process.env.HOST,
       port: process.env.PORT
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new NpmInstallPlugin({ save: true })
+      new NpmInstallPlugin({ save: true }),
+      new CommonsChunkPlugin('vendor', 'vendor.bundle.js')
     ]
   })
 }
