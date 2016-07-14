@@ -6,7 +6,7 @@ const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 const PATHS = {
   app: path.join(__dirname, './app'),
-  build: path.resolve(__dirname, './build')
+  build: path.resolve(__dirname, './client')
 };
 
 const TARGET = process.env.npm_lifecycle_event;
@@ -58,5 +58,5 @@ if (TARGET === 'start' || !TARGET) {
 }
 
 if (TARGET === 'build') {
-  module.exports = wp_merge(common, {});
+  module.exports = merge(common, {});
 }
