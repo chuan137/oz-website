@@ -43,7 +43,7 @@ if (TARGET === 'start' || !TARGET) {
       hot: true,
       inline: true,
       progress: true,
-      stats: 'errors-only',
+      stats: 'minimal',  // 'errors-only',
       host: process.env.HOST,
       port: process.env.PORT
     },
