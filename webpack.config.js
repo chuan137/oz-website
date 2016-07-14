@@ -23,6 +23,7 @@ const common = {
     filename: 'bundle.js'
   },
   resolve: {
+    extensions: ['', '.js', '.jsx'],
     alias: {
       lib: PATHS.lib
     }

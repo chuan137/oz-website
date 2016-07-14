@@ -1,6 +1,3 @@
-/**
- * @jsx React.DOM
- */
 var React                   = require('react')
 var getRadioOrCheckboxValue = require('lib/radiobox-value')
 

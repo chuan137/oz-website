@@ -1,6 +1,3 @@
-/**
- * @jsx React.DOM
- */
 var React = require('react')
 
 var AccountFields = React.createClass({
