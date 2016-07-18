@@ -16,7 +16,7 @@ process.env.BABEL_ENV = TARGET;
 const common = {
   entry: {
     app: PATHS.app,
-    vendor: ['react', 'react-dom']
+    vendor: ['react', 'react-dom', 'react-bootstrap']
   },
   output: {
     path: PATHS.build,
