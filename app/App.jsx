@@ -1,60 +1,49 @@
 import React from 'react';
-import { Nav, NavItem, Navbar } from 'react-bootstrap';
 import { Grid, Row, Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { PanelGroup, Panel, ListGroup, ListGroupItem } from 'react-bootstrap'
+
+import SiteHeader from './components/SiteHeader.jsx';
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a ref="#">Z&Q Package</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-            <Nav>
-              <NavItem>
-                Link
-              </NavItem>
-            </Nav>
-            <Nav pullRight={true}>
-              <NavItem>
-                 <span className="glyphicon glyphicon-user"></span> Login
-              </NavItem>
-            </Nav>
-        </Navbar>
 
-        <Grid fluid={true}>
+        <SiteHeader />
+        <Grid fluid={false}>
           <Row>
+            <Col md={2}>
+              <Panel header="Chu Dan" bsStyle="primary">
+                <ListGroup fill>
+                  <ListGroupItem href="#">ABC</ListGroupItem>
+                  <ListGroupItem href="#">ABC</ListGroupItem>
+                  <ListGroupItem href="#">ABC</ListGroupItem>
+                </ListGroup>
+              </Panel>
 
-            <Col md={3}  componentClass={'aside'}>
-              <div className='sidebar-nav'>
-                <Nav>
-                  <div className='sidebar-divider'>
-                    ABC
-                  </div>
-                  <NavItem>
-                    abc
-                  </NavItem>
-
-                  <div className='sidebar-divider'>
-                    Infomation
-                  </div>
-                  <NavItem> abc </NavItem>
-                  <NavItem> def </NavItem>
-                </Nav>
-
-              </div>
+              <Panel header="Chu Dan 2" bsStyle="primary">
+                <ListGroup fill>
+                  <ListGroupItem href="#">ABC</ListGroupItem>
+                  <ListGroupItem href="#">ABC</ListGroupItem>
+                  <ListGroupItem href="#">ABC</ListGroupItem>
+                </ListGroup>
+              </Panel>
             </Col>
+
             <Col md={8}>
-              Content
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
             </Col>
 
           </Row>
 
         </Grid>
-              </div>
+      </div>
     )
   }
 }
