@@ -5,7 +5,7 @@ const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 const PATHS = {
-  app: path.join(__dirname, './app'),
+  app: path.resolve(__dirname, './app'),
   build: path.resolve(__dirname, './client')
 };
 
@@ -20,6 +20,9 @@ const common = {
   output: {
     path: PATHS.build,
     filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   },
   module: {
     loaders: [
@@ -45,9 +48,7 @@ if (TARGET === 'start' || !TARGET) {
       hot: true,
       inline: true,
       progress: true,
-      stats: 'minimal',
-      host: process.env.HOST,
-      port: process.env.PORT
+      stats: 'minimal'
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
